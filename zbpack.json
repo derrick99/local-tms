@@ -1,4 +1,4 @@
 {
   "build_command": "npm run build",
-  "start_command": "PORT=8080 node .output/server/index.mjs"
+  "start_command": "node .output/server/index.mjs"
 }
