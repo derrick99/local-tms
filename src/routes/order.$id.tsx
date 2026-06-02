@@ -4,7 +4,7 @@ import { Screen } from "@/components/app/Screen";
 import { useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/order/$id")({
-  head: () => ({ meta: [{ title: "訂單明細 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "訂單明細 — 派派通" }] }),
   component: OrderDetail,
   notFoundComponent: () => (
     <div className="grid min-h-dvh place-items-center text-muted-foreground">查無單號</div>

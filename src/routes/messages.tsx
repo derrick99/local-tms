@@ -7,7 +7,7 @@ import { store, useStore } from "@/lib/store";
 export const Route = createFileRoute("/messages")({
   head: () => ({
     meta: [
-      { title: "訊息紀錄 — 飛翔系統" },
+      { title: "訊息紀錄 — 派派通" },
       { name: "description", content: "與運務所之間的訊息往來紀錄。" },
     ],
   }),

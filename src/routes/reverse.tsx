@@ -4,7 +4,7 @@ import { ActionMenuScreen } from "@/components/app/ActionMenuScreen";
 export const Route = createFileRoute("/reverse")({
   head: () => ({
     meta: [
-      { title: "逆物流 — 飛翔系統" },
+      { title: "逆物流 — 派派通" },
       { name: "description", content: "逆物流作業：預約取件、集貨、改址取件與逆物流列表。" },
     ],
   }),

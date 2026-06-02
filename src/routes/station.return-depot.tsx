@@ -24,7 +24,7 @@ import { store, useStore } from "@/lib/store";
 export const Route = createFileRoute("/station/return-depot")({
   head: () => ({
     meta: [
-      { title: "轉回運務所 — 飛翔系統" },
+      { title: "轉回運務所 — 派派通" },
       { name: "description", content: "受權限管控的轉回運務所貨態更新作業。" },
     ],
   }),

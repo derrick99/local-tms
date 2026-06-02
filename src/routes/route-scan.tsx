@@ -8,7 +8,7 @@ import { ScanInput } from "@/components/app/ScanInput";
 export const Route = createFileRoute("/route-scan")({
   head: () => ({
     meta: [
-      { title: "路線掃碼 — 飛翔系統" },
+      { title: "路線掃碼 — 派派通" },
       { name: "description", content: "依配送順序連續掃碼建立今日路線。" },
     ],
   }),

@@ -23,7 +23,7 @@ import {
 import { RECIPIENT_OPTIONS } from "@/lib/actions";
 
 export const Route = createFileRoute("/delivery/complete")({
-  head: () => ({ meta: [{ title: "配送完成 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "配送完成 — 派派通" }] }),
   component: Complete,
 });
 

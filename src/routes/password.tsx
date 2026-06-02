@@ -8,7 +8,7 @@ import { PrimaryButton } from "@/components/app/PrimaryButton";
 export const Route = createFileRoute("/password")({
   head: () => ({
     meta: [
-      { title: "變更密碼 — 飛翔系統" },
+      { title: "變更密碼 — 派派通" },
       { name: "description", content: "變更物流士登入密碼。" },
     ],
   }),

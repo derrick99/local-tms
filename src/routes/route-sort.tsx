@@ -7,7 +7,7 @@ import { PrimaryButton } from "@/components/app/PrimaryButton";
 import { useStore, store } from "@/lib/store";
 
 export const Route = createFileRoute("/route-sort")({
-  head: () => ({ meta: [{ title: "自動路順 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "自動路順 — 派派通" }] }),
   component: RouteSort,
 });
 

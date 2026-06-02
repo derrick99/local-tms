@@ -7,8 +7,8 @@ import { PrimaryButton } from "@/components/app/PrimaryButton";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "登入 — 飛翔系統" },
-      { name: "description", content: "登入飛翔系統物流士配送作業 APP。" },
+      { title: "登入 — 派派通" },
+      { name: "description", content: "登入派派通物流士配送作業 APP。" },
     ],
   }),
   component: Login,
@@ -43,8 +43,8 @@ function Login() {
           <PackageCheck size={34} strokeWidth={2.4} />
         </div>
         <div className="text-center">
-          <h1 className="text-2xl font-extrabold tracking-tight">飛翔系統</h1>
-          <p className="text-sm font-medium text-muted-foreground">TMS 配送作業</p>
+          <h1 className="text-2xl font-extrabold tracking-tight">派派通 TMS</h1>
+          <p className="text-sm font-medium text-muted-foreground">配送作業</p>
         </div>
       </div>
 

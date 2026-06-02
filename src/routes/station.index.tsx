@@ -4,7 +4,7 @@ import { ActionMenuScreen } from "@/components/app/ActionMenuScreen";
 export const Route = createFileRoute("/station/")({
   head: () => ({
     meta: [
-      { title: "站所作業 — 飛翔系統" },
+      { title: "站所作業 — 派派通" },
       { name: "description", content: "站所作業：轉寄物流商、貨到站所、到站異常與轉回運務所。" },
     ],
   }),

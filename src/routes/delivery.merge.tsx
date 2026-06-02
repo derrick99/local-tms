@@ -16,7 +16,7 @@ import {
 import { RECIPIENT_OPTIONS } from "@/lib/actions";
 
 export const Route = createFileRoute("/delivery/merge")({
-  head: () => ({ meta: [{ title: "多件合併簽收 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "多件合併簽收 — 派派通" }] }),
   component: Merge,
 });
 

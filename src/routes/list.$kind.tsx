@@ -7,7 +7,7 @@ import { useStore, store, type Order } from "@/lib/store";
 import type { TabKey } from "@/lib/actions";
 
 export const Route = createFileRoute("/list/$kind")({
-  head: () => ({ meta: [{ title: "貨件列表 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "貨件列表 — 派派通" }] }),
   component: ListScreen,
 });
 

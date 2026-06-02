@@ -9,7 +9,7 @@ import { store, useStore, pendingCount, type PendingStatus } from "@/lib/store";
 export const Route = createFileRoute("/pending")({
   head: () => ({
     meta: [
-      { title: "暫存列表 — 飛翔系統" },
+      { title: "暫存列表 — 派派通" },
       { name: "description", content: "離線暫存的貨態更新，待網路恢復後上傳。" },
     ],
   }),

@@ -20,7 +20,7 @@ const AREAS = ["A 區 — 市區早班", "B 區 — 市區午班", "C 區 — �
 export const Route = createFileRoute("/inbound/sort")({
   head: () => ({
     meta: [
-      { title: "分貨作業 — 飛翔系統" },
+      { title: "分貨作業 — 派派通" },
       { name: "description", content: "掃描貨號並分派至配送區域。" },
     ],
   }),

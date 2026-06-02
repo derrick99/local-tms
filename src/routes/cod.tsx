@@ -3,7 +3,7 @@ import { Screen } from "@/components/app/Screen";
 import { useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/cod")({
-  head: () => ({ meta: [{ title: "代收明細 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "代收明細 — 派派通" }] }),
   component: Cod,
 });
 

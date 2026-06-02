@@ -16,7 +16,7 @@ import { BOX_SIZES, evaluateScan, ACTIONS, type ScanResult } from "@/lib/actions
 import { useStore } from "@/lib/store";
 
 export const Route = createFileRoute("/inbound/collect")({
-  head: () => ({ meta: [{ title: "集貨作業 — 飛翔系統" }] }),
+  head: () => ({ meta: [{ title: "集貨作業 — 派派通" }] }),
   component: Collect,
 });
 

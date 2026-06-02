@@ -4,7 +4,7 @@ import { ActionMenuScreen } from "@/components/app/ActionMenuScreen";
 export const Route = createFileRoute("/inbound/")({
   head: () => ({
     meta: [
-      { title: "取件驗收 — 飛翔系統" },
+      { title: "取件驗收 — 派派通" },
       { name: "description", content: "取件驗收：集貨作業、分貨作業、退貨配送與相關列表。" },
     ],
   }),

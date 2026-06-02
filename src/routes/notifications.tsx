@@ -6,7 +6,7 @@ import { store, useStore, unreadCount } from "@/lib/store";
 export const Route = createFileRoute("/notifications")({
   head: () => ({
     meta: [
-      { title: "通知中心 — 飛翔系統" },
+      { title: "通知中心 — 派派通" },
       { name: "description", content: "派工調整、停送公告與系統維護通知。" },
     ],
   }),
