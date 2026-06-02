@@ -1,0 +1,219 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * 飛翔系統 TMS — OLED 黑底 / 琥珀色設計系統
+ * 高對比、戶外可讀、大字、大點擊區。單一深色主題。
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-surface: var(--surface);
+  --color-surface-foreground: var(--surface-foreground);
+
+  --font-sans: "Inter", "Noto Sans TC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --shadow-press: 4px 4px 0 0 var(--shadow-color);
+
+  --animate-log-in: log-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+:root {
+  --radius: 0.75rem;
+
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --surface: oklch(0.205 0.004 286);
+  --surface-foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.205 0.004 286);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.23 0.005 286);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.769 0.158 70.5);
+  --primary-foreground: oklch(0.18 0.02 60);
+
+  --secondary: oklch(0.27 0.005 286);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.27 0.005 286);
+  --muted-foreground: oklch(0.705 0.012 286);
+
+  --accent: oklch(0.3 0.006 286);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.637 0.208 25.3);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --success: oklch(0.723 0.187 148.5);
+  --success-foreground: oklch(0.145 0.02 150);
+
+  --warning: oklch(0.828 0.16 84);
+  --warning-foreground: oklch(0.18 0.02 60);
+
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 14%);
+  --ring: oklch(0.769 0.158 70.5);
+
+  --shadow-color: oklch(0 0 0 / 60%);
+}
+
+/* 淺色模式：戶外日光下高可讀的白底 / 琥珀色 */
+:root.light {
+  --background: oklch(0.985 0.003 90);
+  --foreground: oklch(0.205 0.012 60);
+
+  --surface: oklch(1 0 0);
+  --surface-foreground: oklch(0.205 0.012 60);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.205 0.012 60);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.205 0.012 60);
+
+  --primary: oklch(0.705 0.16 64);
+  --primary-foreground: oklch(0.21 0.02 60);
+
+  --secondary: oklch(0.945 0.005 80);
+  --secondary-foreground: oklch(0.245 0.012 60);
+
+  --muted: oklch(0.955 0.004 80);
+  --muted-foreground: oklch(0.46 0.012 60);
+
+  --accent: oklch(0.93 0.006 80);
+  --accent-foreground: oklch(0.245 0.012 60);
+
+  --destructive: oklch(0.585 0.21 25.3);
+  --destructive-foreground: oklch(0.99 0 0);
+
+  --success: oklch(0.585 0.16 150);
+  --success-foreground: oklch(0.99 0 0);
+
+  --warning: oklch(0.76 0.15 76);
+  --warning-foreground: oklch(0.21 0.02 60);
+
+  --border: oklch(0.205 0.01 60 / 14%);
+  --input: oklch(0.205 0.01 60 / 18%);
+  --ring: oklch(0.705 0.16 64);
+
+  --shadow-color: oklch(0 0 0 / 18%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior: none;
+    /* Remove the 300ms mobile tap delay so driver taps register instantly */
+    touch-action: manipulation;
+  }
+
+  body {
+    font-family: var(--font-sans);
+  }
+
+  /* Kill the blue tap-flash on phones; we provide our own press states */
+  button,
+  a,
+  [role="button"],
+  [role="menuitem"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+}
+
+@keyframes log-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tap confirmation: a checkmark pops in over the item so drivers get an
+ * unmistakable "triggered" signal without reading the label. */
+@keyframes confirm-pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Expanding ring burst behind the checkmark for extra glanceability. */
+@keyframes confirm-ring {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.2);
+  }
+}
+
+.animate-confirm-pop {
+  animation: confirm-pop 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-confirm-ring {
+  animation: confirm-ring 0.6s ease-out forwards;
+}
